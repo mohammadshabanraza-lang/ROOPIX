@@ -326,7 +326,10 @@ ul{list-style:none}
 .reveal-left{transform:translateX(-40px)}
 .reveal-right{transform:translateX(40px)}
 [style*="--delay"]{transition-delay:var(--delay,0s)}
-.in-view{opacity:1!important;transform:none!important}
+.visible{
+    opacity:1!important;
+    transform:none!important;
+}
 
 /* --- PARALLAX --- */
 .hero-img{will-change:transform}

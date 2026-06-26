@@ -25,7 +25,11 @@ window.addEventListener("load", () => {
 
         setTimeout(() => {
 
-            loader.remove();
+            loader.classList.add("hidden");
+
+setTimeout(() => {
+    loader.remove();
+}, 600);
 
         }, 600);
 
@@ -149,7 +153,7 @@ if (hamburger && mobileMenu) {
         hamburger.classList.toggle("open");
         mobileMenu.classList.toggle("open");
 
-        const expanded = hamburger.classList.contains("active");
+        const expanded = hamburger.classList.contains("open");
 
         hamburger.setAttribute("aria-expanded", expanded);
 
@@ -168,8 +172,8 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
 
     link.addEventListener("click", () => {
 
-        hamburger?.classList.remove("active");
-        mobileMenu?.classList.remove("active");
+        hamburger?.classList.remove("open");
+        mobileMenu?.classList.remove("open");
 
         hamburger?.setAttribute("aria-expanded", "false");
 
@@ -231,8 +235,8 @@ document.addEventListener("keydown", (e) => {
 
         closeSearch();
 
-        hamburger?.classList.remove("active");
-        mobileMenu?.classList.remove("active");
+        hamburger?.classList.remove("open");
+        mobileMenu?.classList.remove("open");
 
         hamburger?.setAttribute("aria-expanded", "false");
 
@@ -252,7 +256,7 @@ document.addEventListener("click", (e) => {
     if (!searchBar) return;
 
     if (
-        searchBar.classList.contains("active") &&
+        searchBar.classList.contains("open") &&
         !searchBar.contains(e.target) &&
         !searchToggle.contains(e.target)
     ) {
@@ -278,7 +282,6 @@ window.addEventListener("scroll", () => {
     sections.forEach(section => {
 
         const top = section.offsetTop - 120;
-        const height = section.offsetHeight;
 
         if (window.scrollY >= top) {
 

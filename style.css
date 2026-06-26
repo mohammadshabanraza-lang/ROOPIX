@@ -306,7 +306,6 @@ ul{list-style:none}
     object-fit:contain;
     margin-bottom:1rem;
     display:block;
-    filter:none;
 }
 .footer-logo-text{font-family:var(--font-display);font-size:1.8rem;font-weight:300;letter-spacing:.2em;margin-bottom:1rem;display:block}
 .footer-tagline{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--pink);margin-bottom:1rem}

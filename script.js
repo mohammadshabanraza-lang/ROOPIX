@@ -73,11 +73,11 @@ function updateBackToTop() {
 
     if (window.scrollY > 500) {
 
-        backToTop.classList.add("show");
+        backToTop.classList.add("visible");
 
     } else {
 
-        backToTop.classList.remove("show");
+        backToTop.classList.remove("visible");
 
     }
 
@@ -146,8 +146,8 @@ if (hamburger && mobileMenu) {
 
     hamburger.addEventListener("click", () => {
 
-        hamburger.classList.toggle("active");
-        mobileMenu.classList.toggle("active");
+        hamburger.classList.toggle("open");
+        mobileMenu.classList.toggle("open");
 
         const expanded = hamburger.classList.contains("active");
 
@@ -192,7 +192,7 @@ function openSearch() {
 
     if (!searchBar) return;
 
-    searchBar.classList.add("active");
+    searchBar.classList.add("open");
 
     const input = searchBar.querySelector("input");
 
@@ -212,7 +212,7 @@ function closeSearch() {
 
     if (!searchBar) return;
 
-    searchBar.classList.remove("active");
+    searchBar.classList.remove("open");
 
 }
 

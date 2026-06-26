@@ -1,98 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roopix Cosmetics</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ROOPIX – Beauty, Redefined. Premium cosmetics and luxury beauty products online in India. Shop authentic makeup from Swiss Beauty, MARS, Lakmé, Nykaa and more." />
+  <meta name="keywords" content="ROOPIX, luxury cosmetics, beauty products, makeup, skincare, India, premium brands" />
+  <meta property="og:title" content="ROOPIX – Beauty, Redefined" />
+  <meta property="og:description" content="Premium cosmetics and luxury beauty products. Shop authentic brands at affordable prices." />
+  <meta property="og:url" content="https://roopix.in" />
+  <title>ROOPIX – Beauty, Redefined</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header>
-    <div class="logo">
-        <img src="images/logo.png" alt="Roopix Logo">
+  <!-- LOADER -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-logo">ROOPIX</div>
+      <div class="loader-bar"><span></span></div>
+      <p class="loader-tagline">Beauty, Redefined</p>
     </div>
+  </div>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#categories">Categories</a>
-        <a href="#brands">Brands</a>
-        <a href="#contact">Contact</a>
+  <!-- BACK TO TOP -->
+  <button id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/919639160626" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" width="28" height="28"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.733 5.47 2.018 7.773L0 32l8.418-2.211A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.26 22.26c-.35.985-2.044 1.876-2.823 1.997-.72.113-1.63.16-2.631-.165-.607-.2-1.386-.468-2.38-.916-4.183-1.808-6.913-6.01-7.12-6.287-.207-.276-1.69-2.248-1.69-4.291 0-2.043 1.07-3.049 1.45-3.464.38-.415.83-.519 1.107-.519h.795c.254 0 .6.095.913.726l1.31 3.089c.164.39.275.843.027 1.235l-.69 1.028c-.207.31-.29.46-.14.717.34.586 1.43 2.105 3.07 3.412 1.705 1.368 3.15 1.8 3.72 2 .29.1.642.073.878-.163l.806-.9c.254-.291.634-.46 1.022-.364l3.027.706c.572.134.86.534.86.994v1.179c0 .415-.062.945-.511 1.526z"/></svg>
+    <span class="whatsapp-pulse"></span>
+  </a>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <nav class="nav-container" role="navigation" aria-label="Main navigation">
+      <a href="#" class="nav-logo" aria-label="ROOPIX Home">
+        <img src="assets/logo.png" alt="ROOPIX Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+        <span class="logo-text-fallback">ROOPIX</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#brands">Brands</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#store">Store</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="search-btn" aria-label="Search" id="searchToggle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+<a href="https://api1.vyaparapp.in/store/roopix" class="nav-cta" target="_blank" rel="noopener">Shop Online</a>        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
-</header>
-
-<section class="hero">
-    <img src="images/hero-banner.png" alt="Roopix Hero Banner">
-</section>
-
-<section id="about" class="section">
-    <h2>About Roopix</h2>
-    <img src="images/about-banner.png" alt="">
-    <p>
-        Roopix brings premium beauty, skincare and makeup products
-        from trusted brands including Swiss Beauty, Mars, Insight,
-        Lakme and Nykaa.
-    </p>
-</section>
-
-<section id="categories" class="section">
-    <h2>Shop By Category</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <img src="images/lips-banner.png">
-            <h3>Lips</h3>
-        </div>
-
-        <div class="card">
-            <img src="images/face-banner.png">
-            <h3>Face Makeup</h3>
-        </div>
-
-        <div class="card">
-            <img src="images/eye-banner.png">
-            <h3>Eye Makeup</h3>
-        </div>
-
-        <div class="card">
-            <img src="images/accessories-banner.png">
-            <h3>Accessories</h3>
-        </div>
-
-        <div class="card">
-            <img src="images/skincare-banner.png">
-            <h3>Skincare</h3>
-        </div>
-
+    <!-- Search bar -->
+    <div class="search-bar" id="searchBar" role="search">
+      <div class="search-inner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" placeholder="Search products, brands, categories…" aria-label="Search products" />
+        <button class="search-close" id="searchClose" aria-label="Close search">✕</button>
+      </div>
     </div>
-</section>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#brands">Brands</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#store">Store</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://wa.me/919639160626" class="mobile-cta" target="_blank" rel="noopener">Order on WhatsApp</a>
+    </div>
+  </header>
 
-<section id="brands" class="section">
-    <h2>Our Brands</h2>
-    <img src="images/brands-banner.png">
-</section>
+  <main>
 
-<section class="section whatsapp">
-    <img src="images/whatsapp-banner.png">
-</section>
+    <!-- HERO -->
+    <section id="hero" aria-label="Hero">
+      <canvas id="particleCanvas" aria-hidden="true"></canvas>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal-up">Luxury Beauty · Est. 2024</p>
+        <h1 class="hero-title reveal-up">Beauty,<br /><em>Redefined.</em></h1>
+        <p class="hero-sub reveal-up">Premium cosmetics. Authentic brands. Delivered with love.</p>
+        <div class="hero-actions reveal-up">
+          <a href="#categories" class="btn-primary">Explore Collections</a>
+          <a href="https://wa.me/919639160626" class="btn-ghost" target="_blank" rel="noopener">Order on WhatsApp</a>
+        </div>
+        <a href="https://api1.vyaparapp.in/store/roopix" class="btn-primary" target="_blank" rel="noopener">Shop Online</a>
+      </div>
+      <div class="hero-image-wrap">
+        <img src="assets/hero.jpg" alt="ROOPIX luxury cosmetics hero" class="hero-img" loading="eager" onerror="this.parentElement.classList.add('no-image')" />
+        <div class="hero-badge">
+          <span class="badge-number">500+</span>
+          <span class="badge-label">Premium Products</span>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
 
-<section id="contact" class="section">
-    <h2>Contact Us</h2>
+    <!-- MARQUEE -->
+    <div class="marquee-bar" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Swiss Beauty</span><span class="dot">✦</span>
+        <span>MARS Cosmetics</span><span class="dot">✦</span>
+        <span>Insight</span><span class="dot">✦</span>
+        <span>Lakmé</span><span class="dot">✦</span>
+        <span>Nykaa</span><span class="dot">✦</span>
+        <span>Premium Skincare</span><span class="dot">✦</span>
+        <span>Luxury Lips</span><span class="dot">✦</span>
+        <span>Eye Drama</span><span class="dot">✦</span>
+        <span>Swiss Beauty</span><span class="dot">✦</span>
+        <span>MARS Cosmetics</span><span class="dot">✦</span>
+        <span>Insight</span><span class="dot">✦</span>
+        <span>Lakmé</span><span class="dot">✦</span>
+        <span>Nykaa</span><span class="dot">✦</span>
+        <span>Premium Skincare</span><span class="dot">✦</span>
+        <span>Luxury Lips</span><span class="dot">✦</span>
+        <span>Eye Drama</span><span class="dot">✦</span>
+      </div>
+    </div>
 
-    <p>📍 Roopix, Sheesh Mahal Building, Ikonda Road, Joya, Amroha, Uttar Pradesh, (244222)</p>
-    <p>📞 WhatsApp Orders Available</p>
-    <p>📧 roopix.in@gmail.com</p>
+    <!-- ABOUT -->
+    <section id="about" class="section-about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-col">
+            <div class="about-img-wrap reveal-left">
+              <img src="assets/about.jpg" alt="ROOPIX beauty store" loading="lazy" onerror="this.parentElement.classList.add('img-placeholder')" />
+              <div class="about-stat-card">
+                <strong>2024</strong>
+                <span>Founded</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-text-col reveal-right">
+            <p class="section-eyebrow">Our Story</p>
+            <h2 class="section-title">We Believe Every Woman Deserves <em>Luxury</em></h2>
+            <p class="about-body">ROOPIX was born from a simple belief — that premium beauty should be accessible to every woman in India. From the heart of Joya, Uttar Pradesh, we curate the finest cosmetics from globally acclaimed brands and deliver them with the care they deserve.</p>
+            <div class="about-pillars">
+              <div class="pillar">
+                <div class="pillar-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <strong>Our Mission</strong>
+                  <p>Deliver 100% authentic luxury cosmetics at prices every woman can celebrate.</p>
+                </div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                </div>
+                <div>
+                  <strong>Our Vision</strong>
+                  <p>To become India's most-trusted beauty destination for premium brands and honest service.</p>
+                </div>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <div>
+                  <strong>Our Promise</strong>
+                  <p>Genuine products, real results, and a beauty experience that feels effortlessly luxurious.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <a class="btn" href="https://wa.me/919639160626">
-        Order on WhatsApp
-    </a>
-</section>
+    <!-- CATEGORIES -->
+    <section id="categories" class="section-categories">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">Shop by Category</p>
+          <h2 class="section-title">Discover Your <em>Signature</em> Look</h2>
+          <p class="section-subtitle">From bold lips to luminous skin — every beauty story starts here.</p>
+        </div>
+        <div class="categories-grid">
+          <div class="cat-card reveal-up" style="--delay:0s">
+            <div class="cat-img-wrap">
+              <img src="assets/cat-lips.jpg" alt="Lips category" loading="lazy" onerror="this.parentElement.classList.add('cat-placeholder','lips-placeholder')" />
+              <div class="cat-overlay"></div>
+            </div>
+            <div class="cat-content">
+              <span class="cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6 2 2 6.48 2 11c0 3.2 1.7 6 4.3 7.8L12 22l5.7-3.2C20.3 17 22 14.2 22 11c0-4.52-4-9-10-9z"/></svg>
+              </span>
+              <h3>Lips</h3>
+              <p>Lipsticks, Glosses & Liners</p>
+              <span class="cat-arrow">→</span>
+            </div>
+          </div>
 
-<footer>
-    <p>© 2026 Roopix Cosmetics. All Rights Reserved.</p>
-</footer>
+          <div class="cat-card reveal-up" style="--delay:.08s">
+            <div class="cat-img-wrap">
+              <img src="assets/cat-face.jpg" alt="Face makeup category" loading="lazy" onerror="this.parentElement.classList.add('cat-placeholder','face-placeholder')" />
+              <div class="cat-overlay"></div>
+            </div>
+            <div class="cat-content">
+              <span class="cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
+              </span>
+              <h3>Face Makeup</h3>
+              <p>Foundation, Blush & Highlighter</p>
+              <span class="cat-arrow">→</span>
+            </div>
+          </div>
 
+          <div class="cat-card reveal-up" style="--delay:.16s">
+            <div class="cat-img-wrap">
+              <img src="assets/cat-eye.jpg" alt="Eye makeup category" loading="lazy" onerror="this.parentElement.classList.add('cat-placeholder','eye-placeholder')" />
+              <div class="cat-overlay"></div>
+            </div>
+            <div class="cat-content">
+              <span class="cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+              <h3>Eye Makeup</h3>
+              <p>Kajal, Mascara & Eyeshadow</p>
+              <span class="cat-arrow">→</span>
+            </div>
+          </div>
+
+          <div class="cat-card reveal-up" style="--delay:.24s">
+            <div class="cat-img-wrap">
+              <img src="assets/cat-skin.jpg" alt="Skincare category" loading="lazy" onerror="this.parentElement.classList.add('cat-placeholder','skin-placeholder')" />
+              <div class="cat-overlay"></div>
+            </div>
+            <div class="cat-content">
+              <span class="cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              </span>
+              <h3>Skincare</h3>
+              <p>Serums, Moisturisers & SPF</p>
+              <span class="cat-arrow">→</span>
+            </div>
+          </div>
+
+          <div class="cat-card reveal-up" style="--delay:.32s">
+            <div class="cat-img-wrap">
+              <img src="assets/cat-acc.jpg" alt="Accessories category" loading="lazy" onerror="this.parentElement.classList.add('cat-placeholder','acc-placeholder')" />
+              <div class="cat-overlay"></div>
+            </div>
+            <div class="cat-content">
+              <span class="cat-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </span>
+              <h3>Accessories</h3>
+              <p>Brushes, Tools & Pouches</p>
+              <span class="cat-arrow">→</span>
+            </div>
+          </div>
+        </div>
+        <div class="section-cta reveal-up">
+          <a href="https://wa.me/919639160626" class="btn-primary" target="_blank" rel="noopener">Shop All Categories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED BRANDS -->
+    <section id="brands" class="section-brands">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">Curated for You</p>
+          <h2 class="section-title">Premium Brands We <em>Carry</em></h2>
+          <p class="section-subtitle">Only the most celebrated names in beauty — guaranteed authentic.</p>
+        </div>
+        <div class="brands-grid reveal-up">
+          <div class="brand-card">
+            <div class="brand-logo-wrap">
+              <img src="assets/brand-swiss.png" alt="Swiss Beauty" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+              <span class="brand-name-fallback">Swiss Beauty</span>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-logo-wrap">
+              <img src="assets/brand-mars.png" alt="MARS Cosmetics" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+              <span class="brand-name-fallback">MARS</span>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-logo-wrap">
+              <img src="assets/brand-insight.png" alt="Insight Cosmetics" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+              <span class="brand-name-fallback">Insight</span>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-logo-wrap">
+              <img src="assets/brand-lakme.png" alt="Lakmé" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+              <span class="brand-name-fallback">Lakmé</span>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-logo-wrap">
+              <img src="assets/brand-nykaa.png" alt="Nykaa" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+              <span class="brand-name-fallback">Nykaa</span>
+            </div>
+          </div>
+          <div class="brand-card brand-coming-soon">
+            <div class="cs-badge">Coming Soon</div>
+            <div class="brand-logo-wrap">
+              <span class="brand-name-fallback coming-soon-text">MAC Cosmetics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE ROOPIX -->
+    <section id="why-us" class="section-why">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">Why ROOPIX</p>
+          <h2 class="section-title">The ROOPIX <em>Difference</em></h2>
+          <p class="section-subtitle">Six reasons why thousands of women trust us with their beauty.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal-up" style="--delay:0s">
+            <div class="why-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>100% Authentic</h3>
+            <p>Every product sourced directly from authorised distributors. No fakes, ever.</p>
+          </div>
+          <div class="why-card reveal-up" style="--delay:.07s">
+            <div class="why-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Premium Brands</h3>
+            <p>International and Indian luxury brands, carefully chosen for quality and performance.</p>
+          </div>
+          <div class="why-card reveal-up" style="--delay:.14s">
+            <div class="why-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Affordable Prices</h3>
+            <p>Luxury doesn't have to be expensive. We keep our prices honest and fair.</p>
+          </div>
+          <div class="why-card reveal-up" style="--delay:.21s">
+            <div class="why-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Latest Collections</h3>
+            <p>New arrivals every week — we keep up with global beauty trends so you don't have to.</p>
+          </div>
+          <div class="why-card reveal-up" style="--delay:.28s">
+            <div class="why-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3>Fast Delivery</h3>
+            <p>Swift, safe packaging with real-time WhatsApp order updates for your peace of mind.</p>
+          </div>
+          <div class="why-card reveal-up" style="--delay:.35s">
+            <div class="why-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>Expert Support</h3>
+            <p>Beauty advisors on WhatsApp — get personal shade recommendations and product guidance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHATSAPP ORDER -->
+    <section class="section-wa">
+      <div class="wa-bg-art" aria-hidden="true"></div>
+      <div class="container wa-container reveal-up">
+        <div class="wa-text">
+          <p class="section-eyebrow light">Direct Shopping</p>
+          <h2 class="wa-title">Order Instantly<br />on <em>WhatsApp</em></h2>
+          <p class="wa-body">No app downloads. No long checkouts. Simply message us your order and we handle the rest — beautifully.</p>
+        </div>
+        <div class="wa-action">
+          <a href="https://wa.me/919639160626?text=Hi%20ROOPIX%2C%20I'd%20like%20to%20place%20an%20order!" class="btn-wa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" fill="currentColor" width="24" height="24"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.733 5.47 2.018 7.773L0 32l8.418-2.211A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.26 22.26c-.35.985-2.044 1.876-2.823 1.997-.72.113-1.63.16-2.631-.165-.607-.2-1.386-.468-2.38-.916-4.183-1.808-6.913-6.01-7.12-6.287-.207-.276-1.69-2.248-1.69-4.291 0-2.043 1.07-3.049 1.45-3.464.38-.415.83-.519 1.107-.519h.795c.254 0 .6.095.913.726l1.31 3.089c.164.39.275.843.027 1.235l-.69 1.028c-.207.31-.29.46-.14.717.34.586 1.43 2.105 3.07 3.412 1.705 1.368 3.15 1.8 3.72 2 .29.1.642.073.878-.163l.806-.9c.254-.291.634-.46 1.022-.364l3.027.706c.572.134.86.534.86.994v1.179c0 .415-.062.945-.511 1.526z"/></svg>
+            Chat & Order Now
+          </a>
+          <p class="wa-number">+91 96391 60626</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORE LOCATION -->
+    <section id="store" class="section-store">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">Visit Us</p>
+          <h2 class="section-title">Find Our <em>Store</em></h2>
+          <p class="section-subtitle">Step into the world of ROOPIX beauty — personally.</p>
+        </div>
+        <div class="store-grid">
+          <div class="store-info reveal-left">
+            <div class="store-detail">
+              <div class="store-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Store Address</strong>
+                <p>Sheesh Mahal Building,<br />Joya, Uttar Pradesh, India</p>
+              </div>
+            </div>
+            <div class="store-detail">
+              <div class="store-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <strong>WhatsApp & Phone</strong>
+                <p>+91 96391 60626</p>
+              </div>
+            </div>
+            <div class="store-detail">
+              <div class="store-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong>Store Hours</strong>
+                <p>Mon–Sat: 10:00 AM – 8:00 PM<br />Sunday: 11:00 AM – 6:00 PM</p>
+              </div>
+            </div>
+            <a href="https://maps.app.goo.gl/Sc9AaVVboaNHYNyQA" class="btn-primary" target="_blank" rel="noopener" style="margin-top:1.5rem; display:inline-flex; align-items:center; gap:.5rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Get Directions
+            </a>
+          </div>
+          <div class="store-map reveal-right">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14001.234567890123!2d78.9!3d28.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMwJzAwLjAiTiA3OMKwNTQnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="ROOPIX Store Location"
+              aria-label="Google Maps showing ROOPIX store in Joya, Uttar Pradesh">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section-testimonials">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">Real Love</p>
+          <h2 class="section-title">What Our Customers <em>Say</em></h2>
+        </div>
+        <div class="testimonials-track-wrap">
+          <div class="testimonials-track" id="testimonialsTrack">
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p>"ROOPIX delivered my Swiss Beauty haul in record time. Products are 100% genuine and the packaging was so elegant. I'm a customer for life!"</p>
+              <div class="testi-author">
+                <div class="testi-avatar">P</div>
+                <div>
+                  <strong>Priya Sharma</strong>
+                  <span>Delhi, India</span>
+                </div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p>"I was skeptical ordering online but ROOPIX made it so easy. WhatsApp ordering is brilliant — my Lakmé foundation matched perfectly. Truly premium service!"</p>
+              <div class="testi-author">
+                <div class="testi-avatar">N</div>
+                <div>
+                  <strong>Neha Gupta</strong>
+                  <span>Lucknow, UP</span>
+                </div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p>"The MARS lipstick collection at ROOPIX is unreal! Great prices, fast delivery, and the team helped me pick the perfect nude shade. Highly recommend!"</p>
+              <div class="testi-author">
+                <div class="testi-avatar">A</div>
+                <div>
+                  <strong>Anjali Verma</strong>
+                  <span>Agra, UP</span>
+                </div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p>"Finally a beauty store that understands quality. Every product from ROOPIX has been authentic and the customer support is genuinely helpful. My go-to forever."</p>
+              <div class="testi-author">
+                <div class="testi-avatar">S</div>
+                <div>
+                  <strong>Sakshi Agarwal</strong>
+                  <span>Kanpur, UP</span>
+                </div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p>"Ordered Nykaa skincare and Insight kajal from ROOPIX. Packed beautifully, delivered quickly. The WhatsApp experience is so personal and convenient. Love it!"</p>
+              <div class="testi-author">
+                <div class="testi-avatar">R</div>
+                <div>
+                  <strong>Riya Singh</strong>
+                  <span>Varanasi, UP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-controls">
+            <button class="testi-btn" id="testiPrev" aria-label="Previous testimonial">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="testi-dots" id="testiDots"></div>
+            <button class="testi-btn" id="testiNext" aria-label="Next testimonial">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section-contact">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <p class="section-eyebrow">Get in Touch</p>
+          <h2 class="section-title">We'd Love to <em>Hear</em> from You</h2>
+        </div>
+        <div class="contact-grid">
+          <a href="tel:+919639160626" class="contact-card reveal-up" style="--delay:0s">
+            <div class="contact-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.24h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <strong>Phone</strong>
+            <span>+91 96391 60626</span>
+          </a>
+          <a href="https://wa.me/919639160626" class="contact-card reveal-up" style="--delay:.08s" target="_blank" rel="noopener">
+            <div class="contact-icon wa-icon-card">
+              <svg viewBox="0 0 32 32" fill="currentColor" width="26" height="26"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.733 5.47 2.018 7.773L0 32l8.418-2.211A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0z"/></svg>
+            </div>
+            <strong>WhatsApp</strong>
+            <span>+91 96391 60626</span>
+          </a>
+          <a href="mailto:hello@roopix.in" class="contact-card reveal-up" style="--delay:.16s">
+            <div class="contact-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <strong>Email</strong>
+            <span>hello@roopix.in</span>
+          </a>
+          <a href="https://roopix.in" class="contact-card reveal-up" style="--delay:.24s">
+            <div class="contact-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <strong>Website</strong>
+            <span>roopix.in</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="ROOPIX" class="footer-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+        <span class="footer-logo-text" style="display:none">ROOPIX</span>
+        <p class="footer-tagline">Beauty, Redefined.</p>
+        <p class="footer-desc">India's premium destination for authentic luxury cosmetics. Shop with confidence, shine with purpose.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/roopix.in?igsh=bnBlY3lkOHdha3Q3"
+target="_blank"
+rel="noopener" aria-label="Instagram" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/919639160626" aria-label="WhatsApp" class="social-icon">
+            <svg viewBox="0 0 32 32" fill="currentColor" width="18" height="18"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.733 5.47 2.018 7.773L0 32l8.418-2.211A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-2C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 2A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About ROOPIX</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#brands">Our Brands</a></li>
+          <li><a href="#why-us">Why Choose Us</a></li>
+          <li><a href="#store">Store Location</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">Lips</a></li>
+          <li><a href="#">Face Makeup</a></li>
+          <li><a href="#">Eye Makeup</a></li>
+          <li><a href="#">Skincare</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919639160626">+91 96391 60626</a></li>
+          <li><a href="mailto:roopix.in@gmail.com">roopix.in@gmail.com</a></li>
+          <li><a href="https://roopix.in">roopix.in</a></li>
+          <li><a href="https://wa.me/919639160626" target="_blank" rel="noopener">WhatsApp Order</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© ROOPIX. All rights reserved. | Crafted with <span style="color:#E91E63">♥</span> for Beauty Lovers</p>
+      <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
